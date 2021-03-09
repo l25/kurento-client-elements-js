@@ -119,18 +119,18 @@
             "type": "MediaPipeline"
           },
           {
-            "name": "width",
-            "doc": "screen width",
+            "name": "outputWidth",
+            "doc": "output width (fixed output size mode)",
             "type": "int",
             "optional": true,
-            "defaultValue": 800
+            "defaultValue": 1920
           },
           {
-            "name": "height",
-            "doc": "screen height",
+            "name": "outputHeight",
+            "doc": "output height (fixed output size mode)",
             "type": "int",
             "optional": true,
-            "defaultValue": 600
+            "defaultValue": 1080
           },
           {
             "name": "framerate",
@@ -138,6 +138,49 @@
             "type": "int",
             "optional": true,
             "defaultValue": 15
+          },
+          {
+            "name": "mode",
+            "doc": "composite mode: 0 - fixed output size, cell size is recalculated, 1 - fixed cell size, output size is recalculated",
+            "type": "int",
+            "optional": true,
+            "defaultValue": 0
+          },
+          {
+            "name": "aspectX",
+            "doc": "aspect x of a cell (fixed output size mode)",
+            "type": "int",
+            "optional": true
+          },
+          {
+            "name": "aspectY",
+            "doc": "aspect y of a cell (fixed output size mode)",
+            "type": "int",
+            "optional": true
+          },
+          {
+            "name": "cellWidth",
+            "doc": "cell width (fixed cell size mode)",
+            "type": "int",
+            "optional": true
+          },
+          {
+            "name": "cellHeight",
+            "doc": "cell height (fixed cell size mode)",
+            "type": "int",
+            "optional": true
+          },
+          {
+            "name": "maxNColumns",
+            "doc": "maximum number of columns in a grid (fixed cell size mode)",
+            "type": "int",
+            "optional": true
+          },
+          {
+            "name": "xyGap",
+            "doc": "gap between cells in a grid (fixed cell size mode)",
+            "type": "int",
+            "optional": true
           }
         ],
         "doc": "Create for the given pipeline"
